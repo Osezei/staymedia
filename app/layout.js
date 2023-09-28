@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import Login from "@/components/Login";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,10 +10,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const { user } = Login;
-  if (!Login) {
-    return <Link href="/" />;
-  }
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
